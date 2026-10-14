@@ -1,15 +1,9 @@
-//
-// Created by ksztn on 14/10/2026.
-//
-
-#ifndef CLUA_CHAR_SET_H
-#define CLUA_CHAR_SET_H
-
 #pragma once
 
 #include <array>
 #include <cstdint>
 #include <immintrin.h>
+#include <algorithm>
 
 class RuntimeCharSet
 {
@@ -144,7 +138,7 @@ public:
         return result;
     }
 
-    RuntimeCharSet negate(
+    RuntimeCharSet difference(
         const RuntimeCharSet& other) const
     {
         RuntimeCharSet result;
@@ -187,8 +181,7 @@ public:
     RuntimeCharSet operator-(
         const RuntimeCharSet& other) const
     {
-        return negate(other);
+        return difference(other);
     }
 };
 
-#endif //CLUA_CHAR_SET_H
