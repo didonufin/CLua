@@ -37,4 +37,5 @@ add_executable(CLua
         src/parser/parser.hpp
         src/semantic_analyzer/semantic_analyzer.cpp
         src/semantic_analyzer/semantic_analyzer.hpp
-        src/main.cpp)
+        src/main.cpp
+        src/common/language_processing/char_set.hpp)
